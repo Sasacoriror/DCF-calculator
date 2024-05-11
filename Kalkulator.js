@@ -30,8 +30,7 @@ function calculate(FCF, years, discount, growth, price){
         ut+="Overvalued";
     }
 
-    const sum = ((FCF_Sum - price) / ((FCF_Sum + price)/2));
-    const percentage = sum * 100;
+    const sum = ((FCF_Sum - price) / FCF_Sum) * 100;
     let skrivUt = "Intrinsic value: $"+FCF_Sum.toFixed(2)+"\n"+ut+": "+percentage.toFixed(0)+"%";
 
     document.getElementById('value').innerText = skrivUt;
